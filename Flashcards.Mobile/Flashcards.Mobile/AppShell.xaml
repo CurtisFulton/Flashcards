@@ -4,7 +4,8 @@
              xmlns:pages="clr-namespace:Flashcards.Mobile.Pages" 
              xmlns:mobile="clr-namespace:Flashcards.Mobile" 
              x:DataType="mobile:AppShell"
-             x:Class="Flashcards.Mobile.AppShell">
+             x:Class="Flashcards.Mobile.AppShell"
+            >
 
     <ShellItem Route="login" FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" />
@@ -29,7 +30,10 @@
     <Tab Title="Account" Route="account" Icon="account.png">
         <ShellContent>
             <ContentPage>
-                <Label Text="Account Page" />
+                <StackLayout>
+                    <Label Text="Account Page" />
+                    <Button Text="Sign out" Clicked="SignOutButton_Clicked" />
+                </StackLayout>
             </ContentPage>
         </ShellContent>
     </Tab>
