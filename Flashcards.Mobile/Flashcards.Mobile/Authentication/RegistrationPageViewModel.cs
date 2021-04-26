@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
@@ -16,7 +17,7 @@ namespace Flashcards.Mobile.Authentication
 
         private async Task CloseRegistrationPage()
         {
-            await Shell.Current.GoToAsync("..").ConfigureAwait(false);
+            await Shell.Current.GoToAsync("//login").ConfigureAwait(false);
         }
     }
 }
