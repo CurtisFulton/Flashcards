@@ -1,13 +1,13 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Flashcards.Mobile.Pages
+namespace Flashcards.Mobile.Account
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [BindingContext(typeof(LoginPageViewModel))]
-    public partial class LoginPage : ContentPage
+    [BindingContext(typeof(AccountPageViewModel))]
+    public partial class AccountPage : ContentPage
     {
-        public LoginPage()
+        public AccountPage()
         {
             InitializeComponent();
         }

@@ -1,11 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
-namespace Flashcards.Mobile.Pages
+namespace Flashcards.Mobile.Authentication
 {
-    public class LoginPageViewModel
+    public class LoginPageViewModel 
     {
         public ICommand LoginCommand { get; }
         public ICommand GoToRegistrationCommand { get; }
@@ -21,12 +22,12 @@ namespace Flashcards.Mobile.Pages
 
         private async Task LogUserIn()
         {
-            await Shell.Current.GoToAsync("//study");
+            await Shell.Current.GoToAsync("//study").ConfigureAwait(false);
         }
 
         private async Task GoToRegistration()
         {
-            await Shell.Current.CurrentPage.DisplayAlert("Not Implement", "Registration hasn't been implemented", "Ok");
+            await Shell.Current.GoToAsync("//login/registration").ConfigureAwait(false);
         }
     }
 }
