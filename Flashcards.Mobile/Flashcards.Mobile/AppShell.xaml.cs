@@ -1,8 +1,10 @@
-﻿using Flashcards.Mobile.Pages;
+﻿using Flashcards.Mobile.Account;
+using Flashcards.Mobile.Authentication;
+using Flashcards.Mobile.Decks;
+using Flashcards.Mobile.Study;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Linq;
 using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,8 +18,14 @@ namespace Flashcards.Mobile
         {
             InitializeComponent();
 
+            Routing.RegisterRoute("login/registration", typeof(RegistrationPage));
+
             var serviceCollection = new ServiceCollection();
-            serviceCollection.AddTransient<LoginPageViewModel>();
+            serviceCollection.AddScoped<LoginPageViewModel>();
+            serviceCollection.AddScoped<RegistrationPageViewModel>();
+            serviceCollection.AddScoped<StudyPageViewModel>();
+            serviceCollection.AddScoped<AccountPageViewModel>();
+            serviceCollection.AddScoped<DeckPageViewModel>();
 
             this.ServiceProvider = serviceCollection.BuildServiceProvider();
         }
@@ -47,7 +55,7 @@ namespace Flashcards.Mobile
 
         private void TrySetBindingContext(Page page, string? path)
         {
-            if (this.CurrentPage is null)
+            if (page is null)
             {
                 return;
             }
@@ -58,7 +66,7 @@ namespace Flashcards.Mobile
             }
 
             // Check if this 
-            var currentPageType = this.CurrentPage.GetType();
+            var currentPageType = page.GetType();
             var bindingContextType = currentPageType.GetCustomAttribute<BindingContextAttribute>()?.BindingContextType;
             if (bindingContextType is null)
             {
@@ -70,7 +78,7 @@ namespace Flashcards.Mobile
             entryOptions.RegisterPostEvictionCallback(OnPageScopeEvicted);
 
             this.CurrentServiceScopes.Set(path, pageScope, entryOptions);
-            this.CurrentPage.BindingContext = pageScope.ServiceProvider.GetRequiredService(bindingContextType);
+            page.BindingContext = pageScope.ServiceProvider.GetRequiredService(bindingContextType);
         }
 
         private void OnPageScopeEvicted(object key, object value, EvictionReason reason, object state)
@@ -79,12 +87,6 @@ namespace Flashcards.Mobile
             {
                 serviceScope.Dispose();
             }
-        }
-
-        private void SignOutButton_Clicked(object sender, EventArgs e)
-        {
-            // Temp
-            Shell.Current.GoToAsync("//login");
         }
     }
 }
