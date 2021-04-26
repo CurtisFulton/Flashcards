@@ -1,0 +1,25 @@
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+
+  <g>
+    <title>background</title>
+    <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  </g>
+  <g>
+    <title>Layer 1</title>
+    <path id="svg_1" d="m15,49l6,0l2,0l10,0l2,0l14,0l0,-44l-14,0l0,-4l-14,0l0,12l-6,0l0,-12l-14,0l0,48l12,0l2,0zm32,-42l0,40l-12,0l0,-40l12,0zm-24,-4l10,0l0,2l0,42l-10,0l0,-34l0,-10zm-2,12l0,32l-6,0l0,-32l6,0zm-18,32l0,-44l10,0l0,10l0,34l-10,0z"/>
+    <rect id="svg_2" y="43" x="5" width="6" height="2"/>
+    <rect id="svg_3" y="38" x="5" width="6" height="2"/>
+    <rect id="svg_4" y="33" x="5" width="6" height="2"/>
+    <rect id="svg_5" y="43" x="37" width="8" height="2"/>
+    <rect id="svg_6" y="38" x="37" width="8" height="2"/>
+    <rect id="svg_7" y="33" x="37" width="8" height="2"/>
+    <rect id="svg_8" y="31" x="25" width="6" height="2"/>
+    <rect id="svg_9" y="35" x="25" width="6" height="2"/>
+    <rect id="svg_10" y="6" x="25" width="6" height="2"/>
+    <rect id="svg_11" y="10" x="25" width="6" height="2"/>
+    <rect id="svg_12" y="39" x="25" width="6" height="2"/>
+    <rect id="svg_13" y="43" x="25" width="6" height="2"/>
+    <rect id="svg_14" y="7" x="7" width="2" height="2"/>
+    <rect id="svg_15" y="11" x="40" width="2" height="2"/>
+  </g>
+</svg>

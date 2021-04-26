@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Flashcards.Mobile.Pages" 
+             xmlns:mobile="clr-namespace:Flashcards.Mobile" 
+             x:DataType="mobile:AppShell"
+             x:Class="Flashcards.Mobile.AppShell">
+
+    <ShellItem Route="login" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" />
+    </ShellItem>
+
+    <Tab Title="Study" Route="study" Icon="open_book.png">
+        <ShellContent>
+            <ContentPage>
+                <Label Text="Study Page" />
+            </ContentPage>
+        </ShellContent>
+    </Tab>
+
+    <Tab Title="Decks" Route="decks" Icon="books.png">
+        <ShellContent>
+            <ContentPage>
+                <Label Text="Decks Page" />
+            </ContentPage>
+        </ShellContent>
+    </Tab>
+
+    <Tab Title="Account" Route="account" Icon="account.png">
+        <ShellContent>
+            <ContentPage>
+                <Label Text="Account Page" />
+            </ContentPage>
+        </ShellContent>
+    </Tab>
+</Shell>
