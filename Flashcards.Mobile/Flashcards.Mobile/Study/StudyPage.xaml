@@ -5,10 +5,26 @@
              x:Class="Flashcards.Mobile.Study.StudyPage"
              x:DataType="local:StudyPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Study Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <CollectionView>
+            <CollectionView.ItemsSource>
+                <x:Array Type="{Type x:String}">
+                    <x:String>Study 1</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItem Text="Hello" />
+                        </SwipeView.RightItems>
+                        
+                        <Frame HasShadow="True">
+                            <Label Text="ello" />
+                        </Frame>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </ContentPage>

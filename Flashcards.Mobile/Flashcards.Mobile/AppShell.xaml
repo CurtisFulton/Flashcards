@@ -8,8 +8,7 @@
              xmlns:mobile="clr-namespace:Flashcards.Mobile" 
              x:DataType="mobile:AppShell"
              x:Class="Flashcards.Mobile.AppShell"
-             Visual="Material"
-            >
+             Visual="Material">
 
     <ShellItem Route="login" FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate authentication:LoginPage}" />

@@ -7,7 +7,7 @@
              Shell.FlyoutBehavior="Disabled"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
+        <StackLayout VerticalOptions="Center" Margin="10,0">
             <Entry Placeholder="Username" Text="{Binding UserName}" />
             <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" />
 

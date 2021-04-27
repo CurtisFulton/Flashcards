@@ -4,7 +4,13 @@
              x:Class="Flashcards.Mobile.App">
     <Application.Resources>
         <ResourceDictionary>
-            
+            <Style TargetType="Label">
+                
+            </Style>
+
+            <Style TargetType="SwipeItem">
+                <Setter Property="BackgroundColor" Value="pink" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
